@@ -28,10 +28,11 @@ function addToList() {
       i < listItems.length;
       i++ // ONCLICK OF EACH ITEM REMOVECHILD //
     ) {
-      listItems[i].onclick = function() {
-        listItems[i].parentElement.removeChild(listItems[i]);
-        // this.parentNode.removeChild(this);
-        // listItems[i].style.display = "none";
+      listItems[i].onclick = function(e) {
+        let target = e.target;
+        if (target.tagName.toUpperCase() == "LI") {
+          target.parentNode.removeChild(target);
+        }
       };
     }
   } else {
