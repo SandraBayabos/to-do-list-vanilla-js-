@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Todolist</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">My To-Do List</div>
+      <div class="text-box">
+        <div class="items-box">
+          <ul id="unordered-list"></ul>
+        </div>
+        <p>Key In List Item:</p>
+        <br />
+
+        <input
+          name="list-item"
+          type="text"
+          maxlength="512"
+          id="list-item"
+          class="searchField"
+        />
+        <button
+          class="btn btn-outline-info"
+          type="button"
+          id="addButton"
+          onclick="addToList()"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
